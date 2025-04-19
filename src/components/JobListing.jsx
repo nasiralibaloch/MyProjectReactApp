@@ -1,10 +1,10 @@
 import React from 'react'
 
-const JobListing = (job) => {
+const JobListing = ({job,index}) => {
     return (
         <div>
             <div key={index} className="bg-white rounded-xl shadow-md relative p-4">
-                
+
                 <div className="mb-6">
 
                     <div className="text-gray-600 my-2">{job.type}</div>

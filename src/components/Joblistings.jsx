@@ -1,8 +1,9 @@
-import React from 'react'
-import jobs from '../jobs.json'; // renamed to make it clearer
+import React from 'react';
+import jobs from '../jobs.json';
+import JobListing from './JobListing';
 
 const Joblistings = () => {
-    console.log(jobs); // make sure this prints { jobs: [...] }
+    console.log(jobs);  // Check if jobs are being correctly imported
 
     return (
         <section className="bg-blue-50 px-4 py-10">
@@ -12,7 +13,7 @@ const Joblistings = () => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {jobs.map((job, index) => (
-                        
+                        <JobListing key={job.id} job={job} index={index} />
                     ))}
                 </div>
             </div>
